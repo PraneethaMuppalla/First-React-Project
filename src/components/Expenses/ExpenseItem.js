@@ -6,7 +6,7 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
   let [title, setTitle] = useState(props.title);
-  console.log(title);
+
   const clickHandler = () => {
     setTitle("Updated");
   };
