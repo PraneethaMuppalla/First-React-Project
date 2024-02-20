@@ -26,6 +26,7 @@ const Expenses = (props) => {
       date: new Date(2021, 5, 12),
     },
   ];
+
   return (
     <Card className="expenses">
       {expenses.map((expense) => (
