@@ -9,6 +9,10 @@ const ExpenseForm = (props) => {
     enteredDate: "",
   });
 
+  const onCancelHandler = () => {
+    props.onCancel();
+  };
+
   const titleChangeHandler = (event) => {
     setUserInput((prevState) => {
       return { ...prevState, enteredTitle: event.target.value };
@@ -76,6 +80,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className="new-expense__actions">
+        <button type="button" onClick={onCancelHandler}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
